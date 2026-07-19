@@ -27,7 +27,7 @@ export const Pagination = ({
           className={`page-item ${page === currentPage ? 'active' : ''}`}
         >
           <a
-            onClick={() => onPageChange(page)}
+            onClick={() => page !== currentPage && onPageChange(page)}
             data-cy="pageLink"
             className="page-link"
             href={`#${page}`}
